@@ -1,0 +1,172 @@
+1)Write a program To reverse the given string:
+Input:naresh
+output:hseran
+1st way:
+--------
+s=input("Enter some string")
+print(s[::-1])
+2nd way:
+--------
+s=input("Enter some string")
+print(''.join(reversed(s)))
+3rd way:
+--------
+s=input("Enter some string:")
+i=len(s)-1
+target="
+while i>=0:
+target=target+s[i]
+i=i-1
+print(target)
+2)write a program to reverse order of words:
+Input:Learning Python is very Easy
+output:Easy Very is Python Learning
+s=input("Enter some string:")
+l=s.split()
+l1=[]
+i=len(l)-1
+while i>=0:
+l1.append(l[i])
+i=i-1
+output=''.join(l1)
+print(output)
+output:
+-------
+Input:Learning Pythonis very Easy
+output:Easy Very is Python Learning
+3) write a program to reverse internal content of each word:
+Input:Nice Computer Education
+output:eciN retupmoC noitacudE
+s=input("Enter some String:")
+l=s.split()
+l1=[]
+i=0
+while i<len(l):
+l1.append(l[i][::-1])
+i=i+1
+output=' '.join(l1)
+print(output)
+4)write a program to print charatcers at odd position and even position
+for the given string?
+1st way:
+--------
+s=input("Enter Some String:")
+print("Charatcers at even position:",s[0::2])
+print("Characters at odd position:",s[1::2])
+2nd way:
+--------
+s=input("Enter some string:")
+i=0
+print("Character at even position:")
+whiel i<len(s):
+print(s[i],end=',')
+i=i+2
+print()
+print("Characters at odd Position:")
+i=1
+while i<len(s):
+print(s[i],end=',')
+i=i+2
+5)Program to merge characters of 2 strings into a single string by taking
+characters alternatively
+Input: s1="ravi"
+ s2="Teja"
+output: rtaevjia
+s1=input("Enter First String:")
+s2=input("Enter SeconD String:")
+output=''
+i,j=0,0
+while i<len(s1) or j<len(s2)
+if i<len(s1):
+output=output+s1[i]
+i+=1
+if j<len(s2):
+output=output+s2[j]
+j+=1
+print(output)
+6)
+write a program to sort the characters of the string and First alphabet
+symbols followed by numaric values:
+Input:B4A1D3
+output:ABD134
+s=input("Enter First String:")
+s1=s2=output=''
+for x in s:
+if x.isalpha():
+s1=s1+x
+else:
+s2=s2+x
+for x in sorted(s1):
+output=output+x
+for x in sorted(s2):
+output=output+x
+print(output)
+7)a program for the following requirement
+Input:a4b3c2
+Output:aaaabbbcc
+s=input("Enter First String:")
+output=''
+for x in s:
+if x.isalpha():
+output=output+x
+previous=x
+else:
+output=output+previous*(int(x)-1)
+print(output)
+Note:chr(unicode)->the corresponding character
+ord(character)-> the corresponding unicode value
+A=65
+a=97
+8)write a program to perform following activity
+INput:a4k3b2
+output:aeknbd
+s=input("Enter some string:")
+output=''
+for x in s:
+if x.isalpha():
+output=output+x
+previous=x
+else:
+output=output+chr(ord(previous)+int(x)))
+print(output)
+9)write a program to remove duplicates characters from the given input string:
+Input:ABCDABBCDABBBCCCDDEEEF
+output:ABCDEF
+s=input("Enter some String:")
+l=[]
+for x in s:
+if x not in l:
+l.append(x)
+output=".join(l)
+print(output)
+10)
+write a program to find the number of occurrences of each character present in the given
+string:
+Input:ABCABCABBCDE
+output:A-3,B-4,C-3,D-1,E-1
+s=input("Enter some string:")
+d={}
+for x in s:
+if x in d.keys():
+d[x]=d[x]+1
+else:
+d[x]=1
+for k,v in d.items():
+print("{}={}Times".format(k,v))
+11)
+write a program to perform the following task:
+input:'one two three four five six seven'
+output:'one owt three ruof five xis seven'
+s=input("Enter some string:")
+l=s.split()
+l1=[]
+i=0
+while i<len(l):
+if i%2==0:
+l1.append(l[i])
+else:
+l1.append(l[i][::-1]
+i=i+1
+output=''.join(l1)
+print('original string:',s)
+print('output string:',output)
